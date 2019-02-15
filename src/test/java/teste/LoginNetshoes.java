@@ -10,10 +10,15 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import pages.TelaInicial;
+import pages.TelaLogin;
+
 public class LoginNetshoes {
 	
 	private static WebDriver driver;
 	static DadosNetshoes dadosNetshoes;
+	static TelaInicial telaInicial;
+	static TelaLogin telaLogin;
 	
 
 	@BeforeClass
@@ -40,10 +45,15 @@ public class LoginNetshoes {
 
 	@Test
 	public void test() {
-		dadosNetshoes.fazerOLogin();
-		dadosNetshoes.inserirDados();
-		dadosNetshoes.fazerLogoff();
-		assertTrue(dadosNetshoes.validarLogoff());
+		//dadosNetshoes.fazerOLogin();
+		//dadosNetshoes.inserirDados();
+		//dadosNetshoes.fazerLogoff();
+		//assertTrue(dadosNetshoes.validarLogoff());
+		
+		telaInicial.fazerOLogin();
+		telaLogin.inserirDados();
+		telaInicial.fazerLogoff();
+		assertTrue(telaInicial.validarLogoff());
 	}
 
 }
