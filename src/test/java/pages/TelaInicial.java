@@ -12,13 +12,11 @@ public class TelaInicial {
 
 	private WebDriver driver;
 	private WebDriverWait wait; 
-	private Actions actions;
 	
-	
-public TelaInicial(WebDriver driver) {
+	public TelaInicial(WebDriver driver) {
 		this.driver = driver;
 		wait = new WebDriverWait(driver, 10);
-		actions = new Actions(driver);
+		new Actions(driver);
 		
 }	
 	
